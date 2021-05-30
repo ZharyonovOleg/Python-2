@@ -23,7 +23,7 @@ dct = {'Рога': 156000, 'Копыта': 1236888, 'Ромашка': 1564568,
 # 1
 print('Решение первым методом: ')
 
-def dct_1(dct1):
+def dct_1(dct1): # O(N**2)
     for a in range(len(dct1)):
         indexmin = a
         for b in range(a + 1, len(dct1)):
@@ -42,7 +42,7 @@ for a in dct_1(list1):
 print('')
 print('Решение вторым методом: ')
 
-def dct_2(list_2):
+def dct_2(list_2): # O(N LOG N)
     dct3 = {}
     list_3 = dict(list_2)
     for a in range(3):
@@ -51,5 +51,5 @@ def dct_2(list_2):
         dct3[indexmax[0]] = indexmax[1]
     return dct3
 
- 
+
 print(dct_2(dct))
